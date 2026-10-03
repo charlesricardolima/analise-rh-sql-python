@@ -1,3 +1,7 @@
+-- Query 2 - Funcionários por Região
+-- Relaciona funcionários aos seus departamentos e informações geográficas.
+-- O filtro mantém apenas registros com região identificada.
+
 SELECT
     funcionarios.EMPLOYEE_ID,
     funcionarios.FIRST_NAME,
@@ -21,4 +25,7 @@ LEFT JOIN HR.COUNTRIES paises
     ON localizacoes.COUNTRY_ID = paises.COUNTRY_ID
 
 LEFT JOIN HR.REGIONS regioes
-    ON paises.REGION_ID = regioes.REGION_ID;
+    ON paises.REGION_ID = regioes.REGION_ID
+
+WHERE regioes.REGION_NAME IS NOT NULL
+ORDER BY regioes.REGION_NAME, funcionarios.EMPLOYEE_ID;
