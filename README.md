@@ -2,6 +2,15 @@
 
 Projeto avaliativo do Módulo 1 da formação **Visualização de Dados e Business Intelligence**, utilizando SQL, Python e técnicas de análise exploratória e visualização de dados.
 
+## Identificação
+
+**Aluno:** Charles Ricardo Nascimento D' Lima  
+**Turma:** T3
+
+## Apresentação em vídeo
+
+[Assistir à apresentação do projeto](https://youtu.be/2PRN0uXB2xE)
+
 ## Objetivo
 
 Analisar dados de Recursos Humanos a partir do schema HR, investigando:
@@ -32,6 +41,15 @@ Analisar dados de Recursos Humanos a partir do schema HR, investigando:
 | `src/main.py` | Análise exploratória, estatísticas e geração dos gráficos |
 | `images/` | Gráficos gerados pela execução do Python |
 | `requirements.txt` | Dependências Python do projeto |
+
+## Tabelas utilizadas
+
+- `EMPLOYEES`: dados dos funcionários, incluindo identificação, cargo, salário e departamento.
+- `DEPARTMENTS`: informações dos departamentos e suas localizações.
+- `JOBS`: informações dos cargos, incluindo o nome da função.
+- `LOCATIONS`: dados de endereço, cidade e estado ou província.
+- `COUNTRIES`: países associados às localizações.
+- `REGIONS`: regiões geográficas associadas aos países.
 
 ## Consultas SQL
 
@@ -113,13 +131,31 @@ A Europa apresenta salário médio aproximado de **8.916,67**, superior ao das A
 
 ## Visualizações
 
-A execução do script gera:
+### Distribuição salarial
 
-- `images/distribuicao_salarial.png`
-- `images/boxplot_salarios.png`
-- `images/salario_medio_departamento.png`
-- `images/funcionarios_regiao.png`
-- `images/salario_medio_regiao.png`
+![Distribuição dos salários](images/distribuicao_salarial.png)
+
+### Boxplot dos salários
+
+![Boxplot dos salários](images/boxplot_salarios.png)
+
+### Salário médio por departamento
+
+![Salário médio por departamento](images/salario_medio_departamento.png)
+
+### Funcionários por região
+
+![Quantidade de funcionários por região](images/funcionarios_regiao.png)
+
+### Salário médio por região
+
+![Salário médio por região](images/salario_medio_regiao.png)
+
+## Pré-requisitos
+
+- Python 3 instalado;
+- `pip` disponível;
+- Git para clonagem e versionamento do projeto.
 
 ## Como executar
 
@@ -160,6 +196,16 @@ Também foi observada diferença entre média e mediana salarial, indicando infl
 A análise representa apenas os dados disponíveis no schema HR utilizado na atividade. Grupos com poucos funcionários podem apresentar médias pouco representativas e não devem ser avaliados isoladamente em uma decisão real de Recursos Humanos.
 
 Além disso, a comparação regional pode refletir diferenças na composição de cargos e departamentos e não necessariamente um efeito exclusivo da localização.
+
+## Melhorias futuras
+
+Como evolução do projeto, seria possível:
+
+- ampliar a análise para tempo de empresa e histórico de cargos;
+- analisar diferenças salariais considerando senioridade e tempo de contratação;
+- criar um dashboard interativo;
+- aprofundar o tratamento de valores ausentes;
+- adicionar novas métricas e comparações entre cargos, departamentos e regiões.
 
 ## Autor
 
